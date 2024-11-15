@@ -1,6 +1,6 @@
 import { getUrlsInDomainFromPage } from "./get_urls_from_html.js";
 
-async function crawlPageForUrls(url) {
+async function getLinksInPage(url) {
   try {
     const response = await fetch(url);
     const contentType = response.headers.get('content-type');
@@ -15,4 +15,4 @@ async function crawlPageForUrls(url) {
   }
 }
 
-export { crawlPageForUrls }
+export { getLinksInPage }

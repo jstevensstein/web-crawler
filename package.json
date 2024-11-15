@@ -1,0 +1,17 @@
+{
+  "name": "web-crawler",
+  "version": "1.0.0",
+  "description": "A basic web crawler",
+  "main": "index.js",
+  "repository": "https://github.com/jstevensstein/web-crawler",
+  "author": "Joshua Stevens-Stein <jstevensstein@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "dependencies": {
+    "is-url-superb": "^6.1.0",
+    "node-html-parser": "^6.1.13",
+    "normalize-url": "^8.0.1",
+    "yargs": "^17.7.2"
+  }
+}

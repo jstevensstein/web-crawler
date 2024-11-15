@@ -20,5 +20,5 @@ const {url, limit} = argv;
 if (isUrl(url, {lenient: false})) {
   startCrawler(url, limit);
 } else {
-  console.log("Invalid url supplied!")
+  console.log("Invalid url supplied! Be sure to include a protocol (http/https).")
 }

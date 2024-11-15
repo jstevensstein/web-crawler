@@ -1,12 +1,17 @@
-import { getUrlsInDomainFromPage } from "./get_urls_from_html.js";
+import { getUrlsInSameDomainFromHtml } from "./get_urls_from_html.js";
 
+/**
+ * Visits a page and returns a list of unique same-domain links on that page.
+ * @param url
+ * @returns {Promise<any[]>}
+ */
 async function getLinksInPage(url) {
   try {
     const response = await fetch(url);
     const contentType = response.headers.get('content-type');
     if (contentType && contentType.includes('text/html')) {
       const htmlString = await response.text();
-      return getUrlsInDomainFromPage(url, htmlString);
+      return getUrlsInSameDomainFromHtml(url, htmlString);
     } else {
       console.error('Response is not HTML');
     }

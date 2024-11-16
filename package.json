@@ -13,7 +13,6 @@
     "crawler": "node index.js"
   },
   "dependencies": {
-    "is-url-superb": "^6.1.0",
     "mocha": "^10.8.2",
     "node-html-parser": "^6.1.13",
     "normalize-url": "^8.0.1",

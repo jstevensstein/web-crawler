@@ -16,9 +16,10 @@ const argv = yargs(hideBin(process.argv))
   })
   .help()
   .argv;
-const {url, limit} = argv;
-if (isUrl(url, {lenient: false})) {
-  startCrawler(url, limit);
-} else {
+try {
+  const url = new URL(argv.url);
+  startCrawler(url.toString(), argv.limit)
+}
+catch (e) {
   console.log("Invalid url supplied! Be sure to include a protocol (http/https).")
 }

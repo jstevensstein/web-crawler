@@ -9,7 +9,8 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "crawler": "node index.js"
   },
   "dependencies": {
     "is-url-superb": "^6.1.0",

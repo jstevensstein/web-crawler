@@ -1,7 +1,7 @@
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import isUrl from "is-url-superb";
-import { startCrawler } from "./crawler.js";
+import { startCrawler } from "./src/crawler.js";
 
 const argv = yargs(hideBin(process.argv))
   .option('url', {

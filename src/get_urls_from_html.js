@@ -18,7 +18,8 @@ function mapHrefsToUniqueSameDomainUrls(hrefs, baseUrl) {
   const urls = hrefs.map(href => new URL(href, baseUrl));
   const filtered = urls.filter(url => url.hostname === hostname);
   const normalized = filtered.map(url => normalizeUrl(url.href));
-  return normalized;
+  const unique = [...new Set(normalized)];
+  return unique;
 }
 
 /**
@@ -32,4 +33,4 @@ function getUrlsInSameDomainFromHtml(baseUrl, htmlString) {
   return mapHrefsToUniqueSameDomainUrls(hrefs, baseUrl)
 }
 
-export { getUrlsInSameDomainFromHtml };
+export { getHrefsInHtml, mapHrefsToUniqueSameDomainUrls, getUrlsInSameDomainFromHtml };
